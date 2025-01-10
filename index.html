@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;    
+        }
+        body{
+            
+        }
+        .top{
+            display: flex;
+            width: 100%;
+            animation-name: topleaf;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            position: absolute;
+            top: -300px;
+            z-index: 0;
+            
+            /* animation-iteration-count: infinite; */
+            /* animation-delay: 2s; */
+        } 
+         @keyframes topleaf {
+            0%{top: -300px;}
+            50%{top: 0px;}
+            100%{top:-300px}
+        } 
+         
+        .down{
+            display: flex;
+            width: 100%;
+            rotate: 180deg;
+            animation-name: downleaf;
+            animation-duration: 4s;
+            animation-timing-function: ease-in;
+            position: absolute;
+            bottom: 0px;
+            z-index: 0;
+
+        }
+        @media screen and (max-width:400px)  {
+            .down{
+                z-index: 1;
+            }
+            .top{
+                top: 0px;
+            }
+        }
+        @keyframes downleaf{
+            from{bottom: -300px;}
+            to{ bottom: 0px; }
+
+        }
+        .continar{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .continar2{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        
+        }
+        .loginbox{
+            width: 300px;
+            height: 500px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            /* z-index: 1; */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: end;
+            border: 2px green outset;
+        }
+        .loginbox:hover{
+            width: 340px;
+            height: 520px;
+        }
+
+        .loginbox h2{
+            position: absolute;
+            top: 40px; 
+            font-size: 40px;
+            color:darkgreen;
+            
+        }
+        .formtop{
+            
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 130px;
+            color: darkgreen ;
+            text-align: center;
+        
+        } 
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            
+        }
+        .pad{
+            padding: 1px;
+            margin: 5px;
+
+        }
+        input{
+            color: goldenrod;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px;
+            height: 30px;
+        }
+        .formdown{
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 300px;
+            /* padding-top: 50px; */
+            display:flex;
+            /* flex-direction: row; */
+            justify-content: center;
+            align-items: center;
+            /* background-color: yellow; */
+            
+        }
+        .formdowninto{
+            display: flex;
+        }
+        a{
+            position: relative;
+            margin: 10px;  
+            text-decoration: none; 
+            color: darkgreen;
+                
+        }
+          button{
+            
+            padding: 6px;
+            color: gold;
+            background-color: green;
+            cursor: pointer;
+            transition: font-size  1s;
+            border: 0;
+            border-radius: 5px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+            
+        }
+        button:hover{
+            background-color: white;
+            font-size: larger; 
+
+        } 
+        
+        
+    </style>
+</head>
+<body>
+    <div class="continar">
+            <img class="top" src="images/leaf.png" alt="loading...">
+            <img class="down" src="images/leaf.png" alt="loading...">
+
+            <div class="continar2">
+
+                <div class="loginbox">
+
+                        <h2>Login</h2>
+
+                    <div class="formtop">
+                        <form action="">
+                        <label class="pad" for="">UserName</label>
+                        <input class="pad" type="email" placeholder="Email">
+                        <label class="pad" for="">Password</label>
+                        <input id="v1" class="pad" type="password" placeholder="password">
+                        <a href="final home copy.html"><button type="button">submit</button></a>
+                        </form>
+                    </div>
+
+                    <div class="formdown">
+                        <div class="formdowninto">
+                        
+                            <a href="signup.html">| New User |</a>
+                            <a href="fp.html">| Forgotpassword |</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</body>
+</html>
